@@ -1,0 +1,2235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.rokers.tickettoridescore.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_titleNamePlayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="4dp"
+                            android:text="PLAYER A:"
+                            android:textAlignment="center"
+                            android:textColor="#009966"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tv_namePlayerA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_titleNamePlayer"
+                            android:layout_toRightOf="@id/tv_titleNamePlayer"
+                            android:paddingRight="4dp"
+                            android:text="John Do"
+                            android:textAlignment="center"
+                            android:textColor="#003300"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_titleTrains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summaryPointA"
+                            android:textColor="#003300"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_totalTrains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_titleTrains"
+                            android:layout_toRightOf="@+id/tv_titleTrains"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="#003300"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_title_one"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_totalTrains"
+                            android:padding="4dp"
+                            android:text="# One:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerOne"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_title_one"
+                            android:layout_toRightOf="@id/tv_title_one"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_points_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_title_one"
+                            android:layout_toRightOf="@id/spinnerOne"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title_two"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Two:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerTwo"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_title_two"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_points_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_title_two"
+                            android:layout_toRightOf="@+id/spinnerTwo"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title_three"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Three:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerThree"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_title_three"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_points_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_title_three"
+                            android:layout_toRightOf="@+id/spinnerThree"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title_four"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Four:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerFour"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_title_four"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_points_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_title_four"
+                            android:layout_toRightOf="@+id/spinnerFour"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title_six"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Six:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerSix"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_title_six"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_points_six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_title_six"
+                            android:layout_toRightOf="@+id/spinnerSix"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title_eight"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Eight:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerEight"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_title_eight"
+                            android:padding="4dp">
+
+                        </Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_points_eight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_title_eight"
+                            android:layout_toRightOf="@+id/spinnerEight"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_titleRoutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summaryPointB"
+                            android:textColor="#003300"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pointsTotalRoutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_titleRoutes"
+                            android:layout_toRightOf="@+id/tv_titleRoutes"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="#003300"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_routesFiveTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_titleRoutes"
+                            android:text="Result For 5 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_fiveFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesFiveTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesFiveFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_fiveFinished"
+                            android:layout_toRightOf="@+id/btn_fiveFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_fiveUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_fiveFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesFiveUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_fiveUnfinished"
+                            android:layout_toRightOf="@+id/btn_fiveUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fiveTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesFiveTitle"
+                            android:layout_toRightOf="@+id/tv_routesFiveTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesSixTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 6 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_sixFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesSixTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesSixFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_sixFinished"
+                            android:layout_toRightOf="@+id/btn_sixFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_sixUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_sixFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesSixUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_sixUnfinished"
+                            android:layout_toRightOf="@+id/btn_sixUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sixTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesSixTitle"
+                            android:layout_toRightOf="@+id/tv_routesSixTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesSevenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 7 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_sevenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesSevenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesSevenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_sevenFinished"
+                            android:layout_toRightOf="@+id/btn_sevenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_sevenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_sevenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesSevenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_sevenUnfinished"
+                            android:layout_toRightOf="@+id/btn_sevenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sevenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesSevenTitle"
+                            android:layout_toRightOf="@+id/tv_routesSevenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesEightTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 8 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_eightFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesEightTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesEightFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_eightFinished"
+                            android:layout_toRightOf="@+id/btn_eightFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_eightUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_eightFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesEightUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_eightUnfinished"
+                            android:layout_toRightOf="@+id/btn_eightUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_eightTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesEightTitle"
+                            android:layout_toRightOf="@+id/tv_routesEightTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesNineTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 9 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_nineFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesNineTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesNineFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_nineFinished"
+                            android:layout_toRightOf="@+id/btn_nineFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_nineUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_nineFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesNineUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_nineUnfinished"
+                            android:layout_toRightOf="@+id/btn_nineUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_nineTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesNineTitle"
+                            android:layout_toRightOf="@+id/tv_routesNineTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesTenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 10 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_tenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesTenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesTenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_tenFinished"
+                            android:layout_toRightOf="@+id/btn_tenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_tenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_tenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesTenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_tenUnfinished"
+                            android:layout_toRightOf="@+id/btn_tenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesTenTitle"
+                            android:layout_toRightOf="@+id/tv_routesTenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesElevenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 11 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_elevenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesElevenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesElevenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_elevenFinished"
+                            android:layout_toRightOf="@+id/btn_elevenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_elevenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_elevenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesElevenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_elevenUnfinished"
+                            android:layout_toRightOf="@+id/btn_elevenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_elevenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesElevenTitle"
+                            android:layout_toRightOf="@+id/tv_routesElevenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesTwelveTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 12 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_twelveFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesTwelveTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesTwelveFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_twelveFinished"
+                            android:layout_toRightOf="@+id/btn_twelveFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_twelveUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_twelveFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesTwelveUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_twelveUnfinished"
+                            android:layout_toRightOf="@+id/btn_twelveUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_twelveTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesTwelveTitle"
+                            android:layout_toRightOf="@+id/tv_routesTwelveTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routesThirteenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 13 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_thirteenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routesThirteenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesThirteenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_thirteenFinished"
+                            android:layout_toRightOf="@+id/btn_thirteenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_thirteenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_thirteenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routesThirteenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_thirteenUnfinished"
+                            android:layout_toRightOf="@+id/btn_thirteenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_thirteenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routesThirteenTitle"
+                            android:layout_toRightOf="@+id/tv_routesThirteenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routes20Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 20 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_20Finished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routes20Title"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routes20Finished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_20Finished"
+                            android:layout_toRightOf="@+id/btn_20Finished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_20Unfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_20Finished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routes20Unfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_20Unfinished"
+                            android:layout_toRightOf="@+id/btn_20Unfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_20Total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routes20Title"
+                            android:layout_toRightOf="@+id/tv_routes20Title"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_routes21Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 21 Points Routes:"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_21Finished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_routes21Title"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routes21Finished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_21Finished"
+                            android:layout_toRightOf="@+id/btn_21Finished"
+                            android:text="@string/pointsAtStart"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_21Unfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_21Finished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_routes21Unfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_21Unfinished"
+                            android:layout_toRightOf="@+id/btn_21Unfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_21Total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_routes21Title"
+                            android:layout_toRightOf="@+id/tv_routes21Title"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_titleUnusedStation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summaryPointC"
+                            android:textColor="#003300"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_usedTrainStations"
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_titleUnusedStation"
+                            android:text="# Used Stations"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_usedTrainStations"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/btn_usedTrainStations"
+                            android:layout_toRightOf="@+id/btn_usedTrainStations"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_pointsForTrainStations"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_titleUnusedStation"
+                            android:layout_toRightOf="@+id/tv_titleUnusedStation"
+                            android:paddingLeft="8dp"
+                            android:text="@string/startPointsForTrainStations"
+                            android:textColor="#003300"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_longTrack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summaryPointD"
+                            android:textColor="#003300"
+                            android:textSize="9sp" />
+
+                        <CheckBox
+                            android:id="@+id/chb_longTrack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_longTrack"
+                            android:clickable="true"
+                            android:onClick="pointsForTheLongestTrack"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="YES"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_pointsForTheLongTrack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/chb_longTrack"
+                            android:layout_toRightOf="@+id/chb_longTrack"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="#003300"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btn_totalPoints"
+                            android:layout_width="90dp"
+                            android:layout_height="20dp"
+                            android:background="#99ff00"
+                            android:text="TOTAL POINTS"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_totalPoints"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_totalPoints"
+                            android:layout_toRightOf="@id/btn_totalPoints"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#009966"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitleNamePlayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="4dp"
+                            android:text="PLAYER B:"
+                            android:textAlignment="center"
+                            android:textColor="#3366cc"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBNamePlayer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBTitleNamePlayer"
+                            android:layout_toRightOf="@id/tv_playerBTitleNamePlayer"
+                            android:paddingRight="4dp"
+                            android:text="Joe Do"
+                            android:textAlignment="center"
+                            android:textColor="#000066"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitleTrains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A. Points For Trains"
+                            android:textColor="#000099"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBTotalTrains"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBTitleTrains"
+                            android:layout_toRightOf="@+id/tv_playerBTitleTrains"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="#000099"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitle_one"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_playerBTotalTrains"
+                            android:padding="4dp"
+                            android:text="# One:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/playerBSpinnerOne"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBTitle_one"
+                            android:layout_toRightOf="@id/tv_playerBTitle_one"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_playerBPoints_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitle_one"
+                            android:layout_toRightOf="@id/playerBSpinnerOne"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitle_two"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Two:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/playerBSpinnerTwo"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_playerBTitle_two"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_playerBPoints_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitle_two"
+                            android:layout_toRightOf="@+id/playerBSpinnerTwo"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitle_three"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Three:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/playerBSpinnerThree"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_playerBTitle_three"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_playerBPoints_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitle_three"
+                            android:layout_toRightOf="@+id/playerBSpinnerThree"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitle_four"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Four:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/playerBSpinnerFour"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_playerBTitle_four"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_playerBPoints_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitle_four"
+                            android:layout_toRightOf="@+id/playerBSpinnerFour"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitle_six"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Six:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/playerBSpinnerSix"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_playerBTitle_six"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_playerBPoints_six"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitle_six"
+                            android:layout_toRightOf="@+id/playerBSpinnerSix"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitle_eight"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="# Eight:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/playerBSpinnerEight"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/tv_playerBTitle_eight"
+                            android:padding="4dp"></Spinner>
+
+                        <TextView
+                            android:id="@+id/tv_playerBPoints_eight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitle_eight"
+                            android:layout_toRightOf="@+id/playerBSpinnerEight"
+                            android:padding="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitleRoutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B. Points For Routes"
+                            android:textColor="#000099"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBPointsTotalRoutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitleRoutes"
+                            android:layout_toRightOf="@+id/tv_playerBTitleRoutes"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="#000099"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesFiveTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_playerBTitleRoutes"
+                            android:text="Result For 5 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBFiveFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesFiveTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesFiveFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBFiveFinished"
+                            android:layout_toRightOf="@+id/btn_playerBFiveFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBFiveUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBFiveFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesFiveUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBFiveUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBFiveUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBFiveTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesFiveTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesFiveTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesSixTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 6 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBSixFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesSixTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesSixFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBSixFinished"
+                            android:layout_toRightOf="@+id/btn_playerBSixFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBSixUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBSixFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesSixUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBSixUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBSixUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBSixTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesSixTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesSixTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesSevenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 7 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBSevenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesSevenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesSevenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBSevenFinished"
+                            android:layout_toRightOf="@+id/btn_playerBSevenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBSevenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBSevenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesSevenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBSevenUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBSevenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBSevenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesSevenTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesSevenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesEightTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 8 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBEightFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesEightTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesEightFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBEightFinished"
+                            android:layout_toRightOf="@+id/btn_playerBEightFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBEightUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBEightFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesEightUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBEightUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBEightUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBEightTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesEightTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesEightTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesNineTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 9 Points Routes:"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBNineFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesNineTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesNineFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBNineFinished"
+                            android:layout_toRightOf="@+id/btn_playerBNineFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBNineUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBNineFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesNineUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBNineUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBNineUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBNineTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesNineTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesNineTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesTenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 10 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBTenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesTenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesTenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBTenFinished"
+                            android:layout_toRightOf="@+id/btn_playerBTenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBTenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBTenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesTenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBTenUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBTenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBTenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesTenTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesTenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesElevenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 11 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBElevenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesElevenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesElevenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBElevenFinished"
+                            android:layout_toRightOf="@+id/btn_playerBElevenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBElevenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBElevenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesElevenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBElevenUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBElevenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBElevenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesElevenTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesElevenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesTwelveTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 12 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBTwelveFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesTwelveTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesTwelveFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBTwelveFinished"
+                            android:layout_toRightOf="@+id/btn_playerBTwelveFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBTwelveUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBTwelveFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesTwelveUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBTwelveUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBTwelveUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBTwelveTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesTwelveTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesTwelveTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesThirteenTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 13 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerBThirteenFinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutesThirteenTitle"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesThirteenFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBThirteenFinished"
+                            android:layout_toRightOf="@+id/btn_playerBThirteenFinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBThirteenUnfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerBThirteenFinished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutesThirteenUnfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerBThirteenUnfinished"
+                            android:layout_toRightOf="@+id/btn_playerBThirteenUnfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBThirteenTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutesThirteenTitle"
+                            android:layout_toRightOf="@+id/tv_playerBRoutesThirteenTitle"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutes20Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 20 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerB20Finished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutes20Title"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutes20Finished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerB20Finished"
+                            android:layout_toRightOf="@+id/btn_playerB20Finished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerB20Unfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerB20Finished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutes20Unfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerB20Unfinished"
+                            android:layout_toRightOf="@+id/btn_playerB20Unfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerB20Total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutes20Title"
+                            android:layout_toRightOf="@+id/tv_playerBRoutes20Title"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutes21Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Result For 21 Points Routes:"
+                            android:textColor="@android:color/holo_blue_light"
+                            android:textSize="10sp"
+                            android:textStyle="italic" />
+
+                        <Button
+                            android:id="@+id/btn_playerB21Finished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBRoutes21Title"
+                            android:layout_centerInParent="true"
+                            android:text="Finished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutes21Finished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerB21Finished"
+                            android:layout_toRightOf="@+id/btn_playerB21Finished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerB21Unfinished"
+                            android:layout_width="90dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/btn_playerB21Finished"
+                            android:layout_centerInParent="true"
+                            android:text="Unfinished"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBRoutes21Unfinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/btn_playerB21Unfinished"
+                            android:layout_toRightOf="@+id/btn_playerB21Unfinished"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerB21Total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBRoutes21Title"
+                            android:layout_toRightOf="@+id/tv_playerBRoutes21Title"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTitleUnusedStation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C. Points For Unused Stations"
+                            android:textColor="#000099"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btn_playerBUsedTrainStations"
+                            android:layout_width="120dp"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv_playerBTitleUnusedStation"
+                            android:text="# Used Stations"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBUsedTrainStations"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/btn_playerBUsedTrainStations"
+                            android:layout_toRightOf="@+id/btn_playerBUsedTrainStations"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBPointsForTrainStations"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/tv_playerBTitleUnusedStation"
+                            android:layout_toRightOf="@+id/tv_playerBTitleUnusedStation"
+                            android:paddingLeft="8dp"
+                            android:text="@string/startPointsForTrainStations"
+                            android:textColor="#000099"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBLongTrack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="D. Did Player build longer track than rival?"
+                            android:textColor="#000099"
+                            android:textSize="9sp" />
+
+                        <CheckBox
+                            android:id="@+id/chb_playerBLongTrack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_playerBLongTrack"
+                            android:clickable="true"
+                            android:onClick="pointsForTheLongestTrack"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="8dp"
+                            android:text="YES"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBPointsForTheLongTrack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/chb_playerBLongTrack"
+                            android:layout_toRightOf="@+id/chb_playerBLongTrack"
+                            android:paddingLeft="8dp"
+                            android:text="@string/pointsAtStart"
+                            android:textColor="#000099"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_playerBTotalPointsTitle"
+                            android:layout_width="90dp"
+                            android:layout_height="20dp"
+                            android:background="#99ff00"
+                            android:text="TOTAL POINTS: "
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_playerBTotalPoints"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/tv_playerBTotalPointsTitle"
+                            android:layout_toRightOf="@id/tv_playerBTotalPointsTitle"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="0"
+                            android:textAlignment="viewEnd"
+                            android:textColor="#009966"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

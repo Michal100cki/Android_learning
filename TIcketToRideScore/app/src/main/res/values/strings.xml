@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ticket To Ride: Europa (ScoreApp)</string>
+    <string name="pointsAtStart">0</string>
+    <string name="startPointsForTrainStations">12</string>
+    <string name="summaryPointA">A. Points For Trains</string>
+    <string name="summaryPointB">B. Points For Routes</string>
+    <string name="summaryPointC">C. Points For Unused Stations</string>
+    <string name="summaryPointD">D. Did Player build longer track than rival?</string>
+
+
+</resources>
